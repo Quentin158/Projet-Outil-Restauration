@@ -1,3 +1,5 @@
+# Projet outil de Restauration
+
 Ce fichier `README.md` présente mon projet de fin de second semestre de seconde année de BUT Informatique, développé en Angular.
 
 ![Image présentation projet](assets/image_couverture.png)
