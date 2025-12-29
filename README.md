@@ -1,5 +1,3 @@
-<img width="415" height="184" alt="restauration" src="https://github.com/user-attachments/assets/c8710cd0-a0db-4a45-a10a-a666438cf531" /># Projet outil de restauration
-
 Ce fichier `README.md` présente mon projet de fin de second semestre de seconde année de BUT Informatique, développé en Angular.
 
 ![Image présentation projet](assets/image_couverture.png)
