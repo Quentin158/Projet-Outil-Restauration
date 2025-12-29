@@ -1,4 +1,4 @@
-# Projet outil de restauration
+<img width="415" height="184" alt="restauration" src="https://github.com/user-attachments/assets/c8710cd0-a0db-4a45-a10a-a666438cf531" /># Projet outil de restauration
 
 Ce fichier `README.md` présente mon projet de fin de second semestre de seconde année de BUT Informatique, développé en Angular.
 
@@ -8,6 +8,9 @@ Ce fichier `README.md` présente mon projet de fin de second semestre de seconde
 
 ## Sommaire
 [1. Liste des fonctionnalités minimales développées](#1-liste-des-fonctionnalités-minimales-développées)  
+&emsp;[1.1. Composants](#11-équipe-de-développement)  
+&emsp;[1.2. Services](#12-équipe-de-développement)  
+&emsp;[1.3. Autre classes](#13-autre-classes)  
 [2. Liste des fonctionnalités bonus développées](#2-liste-des-fonctionnalités-bonus-développées)   
 [3. Présentation rapide des classes](#3-présentation-rapide-des-classes)  
 [4. Routes de l'application](#4-routes-de-lapplication)  
