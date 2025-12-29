@@ -9,8 +9,8 @@ Ce fichier `README.md` présente mon projet de fin de second semestre de seconde
 ## Sommaire
 [1. Liste des fonctionnalités minimales développées](#1-liste-des-fonctionnalités-minimales-développées)  
 [2. Liste des fonctionnalités bonus développées](#2-liste-des-fonctionnalités-bonus-développées)   
-[3. Présentation rapide des classes](#3-présentation-rapide-des-classes)
-[4. Routes de l'application](#4-routes-de-l'application)  
+[3. Présentation rapide des classes](#3-présentation-rapide-des-classes)  
+[4. Routes de l'application](#4-routes-de-lapplication)  
 
 ---
 
