@@ -1,0 +1,35 @@
+<br><div *ngIf="etatChargement === 'chargement'" class="alert alert-info">
+    <h3>Chargement des menus en cours...</h3>
+    <p>Merci de patienter quelques instants</p>
+  </div>
+  <div *ngIf="etatChargement === 'erreur'" class="alert alert-danger">
+    <h3>Service non disponible</h3>
+    <p>Veuillez réessayer dans quelques instants</p>
+  </div>
+  
+  <div *ngIf="etatChargement === 'chargé'">
+    <form class="mb-3">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="etatFiltre">Filtrer par état :</label>
+          <select [(ngModel)]="etatFiltre" (ngModelChange)="filtre()" name="etatFiltre" id="etatFiltre" class="form-control">
+            <option value="">Tous les états</option>
+            <option *ngFor="let etat of etatMenu | keyvalue" [value]="etat.value">{{ etat.value }}</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="motCle">Rechercher par contenu :</label>
+          <input [(ngModel)]="motCle" (ngModelChange)="filtre()" type="text" name="motCle" id="motCle" class="form-control" placeholder="Entrez un mot clé">
+        </div>
+      </div>
+    </form>
+    <div *ngIf="(menus|async) as listeMenus"> 
+      <h2> <b>{{ listeMenus.length }}</b> menus enregistrés</h2>
+      <ul class="list-group mb-2">
+        <app-menu-item
+          *ngFor="let menu of listeMenus"
+          [menu]="menu"></app-menu-item>
+      </ul>
+      <a routerLink="/menu/new" class="btn btn-dark mb-3">Nouveau menu</a>
+    </div>
+  </div>

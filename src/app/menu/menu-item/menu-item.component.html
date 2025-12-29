@@ -1,0 +1,22 @@
+<li class="list-group-item"
+[ngClass]="{'bg-dark' : menu.statut==statutMenu.INACTIF,
+            'bg-success' : menu.statut==statutMenu.ACTIF}"
+>
+  <div class="d-flex justify-content-between align-items-center cursor-pointer" (click)="onDetail(menu.id)">
+    <div>
+      <p class="menu-title mb-0">{{menu.nom}}</p>
+      <p class="mb-0"><strong>Description:</strong> {{menu.description}}</p>
+      <p class="mb-0"><strong>Date de création:</strong> {{menu.date_creation}}</p>
+      <p class="mb-0"><strong>Total des calories:</strong> {{totalCalories}}</p>
+      <span class="badge rounded-pill" [ngClass]="{'bg-dark': menu.statut==statutMenu.ACTIF, 'bg-danger': menu.statut==statutMenu.INACTIF}">
+        {{ menu.statut == statutMenu.ACTIF ? 'ACTIF' : 'INACTIF' }}
+      </span>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button class="btn" (click)="onRegresse($event);" [disabled]="menu.statut==statutMenu.INACTIF"> <i class="fa-solid fa-backward"></i> </button>
+      <a class="btn" routerLink="/menu/edit/{{menu.id}}" (click)="$event.stopPropagation()">   <i class="fa-solid fa-gear"></i> </a>
+      <a class="btn" (click)="onSupprime($event)"> <i class="fa-solid fa-trash"></i></a>
+      <button class="btn" (click)="onProgresse($event)"  [disabled]="menu.statut==statutMenu.ACTIF" > <i class="fa-solid fa-forward"></i> </button>
+    </div>
+  </div>
+</li>

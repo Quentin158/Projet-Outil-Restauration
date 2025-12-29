@@ -1,0 +1,23 @@
+<br><h2>{{ menu.id ? 'Modifier le menu' : 'Nouveau menu' }}</h2>
+
+<form #formulaire="ngForm" (ngSubmit)="onSubmit(formulaire)">
+    <div class="form-group">
+        <label for="nom">Nom</label>
+        <input [(ngModel)]="menu.nom" required minlength="3" maxlength="50" type="text" name="nom" id="nom" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="date">Description</label>
+        <textarea [(ngModel)]="menu.description" minlength="10" max="256" name="memo" id="memo" cols="30" rows="3" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="etat">Statut</label>
+        <select [(ngModel)]="menu.statut" required name="etat" id="etat" class="form-control">
+            <option *ngFor="let etat of etatMenu | keyvalue" [value]="etat.value">{{ etat.value }}</option>
+        </select>
+    </div>
+    <div class="d-flex btn-group mt-2">
+        <button class="btn btn-success" type="submit" [disabled]="!formulaire.valid">{{ menu.id ? 'Modifier ce menu' : 'Créer ce menu' }}</button>
+        <a routerLink="/menus" class="btn btn-warning">Annuler</a>
+    </div>
+</form>
+

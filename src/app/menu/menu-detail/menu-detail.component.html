@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Détails menu</h2>
+  <div class="card" [ngClass]="{
+    'border-success': menu.statut === 'actif',
+    'border-dark': menu.statut === 'inactif'
+  }">
+    <div class="card-body">
+      <h4 class="card-title">{{ menu.nom }}</h4>
+      <div [ngClass]="{
+          'bg-success text-white': menu.statut === 'actif',
+          'bg-dark text-white': menu.statut === 'inactif'
+      }" class="p-2 mb-3 d-inline-block rounded">
+      <p class="m-0"><strong>État :</strong> {{ menu.statut }}</p>
+      </div>
+      <p class="card-text"><strong>Description :</strong> {{ menu.description }}</p>
+      <p class="card-text"><strong>Date création :</strong> {{ menu.date_creation }}</p>
+    </div>
+  </div>
+  <br>
+  <h3>Plats disponibles dans ce menu :</h3>
+  <app-plat-list [menuId]="menu.id"></app-plat-list>
+  <div class="card-footer mt-3">
+    <a routerLink="/menus" class="btn btn-dark mb-2">Retour à la liste des menus</a>
+  </div>
+</div>
